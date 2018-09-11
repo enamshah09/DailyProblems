@@ -34,12 +34,13 @@ public class FirstMissingPositive {
         }
 
         // Check for the Missing positive.
-        for (int i = 0; i < nums.length; i++) {
+        int i;
+        for (i = 0; i < nums.length; i++) {
             if (i + 1 != nums[i]) {
-                return i + 1;
+                break;
             }
         }
-        return 0;
+        return i + 1;
     }
 
     private static void swap(int[] nums, int i, int j) {
